@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealTime Analytics - CoronaVirus</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="https://kit.fontawesome.com/996a349b9a.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161203985-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161203985-1');
+    </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e842cd335bcbb0c9aac79f4/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<script type="text/javascript">
+  // SCROLL BAR - if no Webkit browser
+(function(){
+  let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+  let scrollbarDiv = document.querySelector('.scrollbar');
+    if (!isChrome && !isSafari) {
+      scrollbarDiv.innerHTML = 'You need Webkit browser to run this code';
+    }
+})();
+</script>
+<style type="text/css">
+  /* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+.scrollbar::-webkit-scrollbar {
+    background-color:#fff;
+    width:16px
+}
+
+/* background of the scrollbar except button or resizer */
+.scrollbar::-webkit-scrollbar-track {
+    background-color:#fff
+}
+.scrollbar::-webkit-scrollbar-track:hover {
+    background-color:#f4f4f4
+}
+
+/* scrollbar itself */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color:#babac0;
+    border-radius:16px;
+    border:5px solid #fff
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color:#a0a0a5;
+    border:4px solid #f4f4f4
+}
+
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {display:none}
+
+.scrollbar {
+    height: 75vh;
+    width: 25vw;
+    min-width: 150px;
+    background: #fff;
+    overflow-y: scroll}
+
+</style>
+  <style type="text/css">
+    body
+{
+  margin:0;
+  overflow-X:hidden;
+  font-family:"Raleway","Roboto","Helvetica",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -ms-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  /*background:rgba(18,18,26,1);*/
+  /*background-image:url('https://thumbs.gfycat.com/RigidShinyErne-size_restricted.gif');*/
+  background-blend-mode:overlay;
+  background-size:15%;
+  width:100%;
+}
+::-webkit-scrollbar
+{
+  display:none;
+}
+
+/*Grid Wrapper*/
+ 
+#home
+{
+  color:#aaaaaf;
+  width:100%;
+  height:100%;
+  position:relative;
+  top:40px;
+  padding-bottom:100px;
+  display:block;
+  transition:transform 0.5s ease-in-out;
+}
+#home>section
+{
+  position:relative;
+}
+#home>.header>div
+{
+  position:relative;
+  display:inline-block;
+  margin-right:25px;
+  vertical-align:middle;
+  text-shadow:0px 5px 10px rgba(0,0,0,1);
+}
+#home>.pagetag
+{
+  position:absolute;
+  top:10px;
+  left:10px;
+  padding:10px 15px;
+  font-size:0.8em;
+  color:rgba(96,78,177,1);
+  background:rgba(0,0,0,0.1);
+}
+/*Heading*/
+#home .logo
+{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background-image:url("imgs-gifs/Coronavirus-Logo.jpg");
+  background-size:100%;
+  background-position:50% 50%;
+  box-shadow:0px 0px 20px -10px rgba(0,0,0,0.5);
+}
+#home h2
+{
+  font-weight:300;
+  letter-spacing:0.07em;
+  margin-left:-20px;
+}
+#home h5
+{
+  margin-top:-20px;
+  font-weight:400;
+  letter-spacing:1.9em;
+}
+#home h2>span:first-child
+{
+  font-size:3em;
+}
+#home h2>span:nth-child(2)
+{
+  font-size:2em;
+  margin-left:-0.2em;
+  font-weight:400;
+}
+#grid_wrapper
+{
+  width:100%;
+  display:inline-block;
+  margin-top:60px;
+  box-sizing:border-box;
+  padding:0px 20px;
+  margin-left:0px;
+  position:relative;
+}
+#grid_wrapper.init>card
+{
+  transform:scale(0);
+}
+#grid_wrapper>card
+{
+  display:block;
+  width:25%;
+  height:200px;
+  float:left;
+  transition:transform 0.3s cubic-bezier(0,0,0,1);
+  padding:20px;
+  box-sizing:border-box;
+}
+#grid_wrapper>card>div,#content_wrapper>.clone
+{
+  color:#aaaaaf;
+  cursor:pointer;
+  width:100%;
+  height:100%;
+  position:relative;
+  transition:box-shadow 0.3s;
+  overflow:hidden;
+  border:1px solid rgba(66,76,119,0.1);
+  box-shadow:0px 20px 50px 0px rgba(0,0,0,0.2);
+}
+#grid_wrapper>card>div.active
+{
+  opacity:0;
+}
+#grid_wrapper>card>div:hover
+{
+  box-shadow:0px 30px 60px 0px rgba(0,0,0,0.25);
+}
+#grid_wrapper>card>div:before,#content_wrapper>.clone:before
+{
+  width:100%;
+  height:100%;
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  background-size:100%;
+  background-position:50% 50%;
+  background-blend-mode:overlay;
+  background-image:url("imgs-gifs/GIF-Animated-Corona.gif");
+  background-color:rgba(43,26,119,0.25);
+  transition:all 0.2s;
+  -webkit-filter:blur(3px);
+  -moz-filter:blur(3px);
+  filter:blur(3px);
+  -ms-filter:blur(3px);
+}
+#grid_wrapper>card>div>span,#content_wrapper>.clone>span
+{
+  width:100%;
+  height:50px;
+  margin-top:-25px;
+  top:50%;
+  position:absolute;
+  line-height:50px;
+  display:block;
+  text-align:center;
+  font-size:1.5em;
+  opacity:1;
+}
+/*End of Section*/
+
+/*NavBar Style*/
+/*Comes up only when you're open in a section*/
+nav.main
+{
+  overflow-X:auto;
+  overflow-Y:visible;
+  z-index:+25;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:55px;
+  display:block;
+  white-space:nowrap;
+}
+body:after,#footer:after,#footer:before
+{
+  /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */;
+  background-image: linear-gradient(90deg, rgba(107,208,228,1) 0%, rgba(96,78,177,1) 33%, rgba(200,142,102,1) 66%, rgba(201,85,169,1) 100%); /* w3c */
+  content:"";
+  position:fixed;
+  width:100%;
+  top:0px;
+  left:0px;
+  height:5px;
+  z-index:+30;
+}
+nav.main.inactive>.tab
+{
+  transform:rotateX(90deg) translateY(-25px);
+}
+nav.main>.tab
+{
+  transform-origin:50% 0% 0px;
+  background:#fff;
+  box-sizing:border-box;
+  /* border-top:5px solid; */
+  font-weight:600;
+  font-size:0.9em;
+  color:#161725;
+  display:inline-block;
+  width:15%;
+  text-align:center;
+  line-height:45px;
+  height:100%;
+  border-top:rgba(0,0,0,0.5) 5px solid;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  transition:transform 0.5s cubic-bezier(0,0,0,1);
+}
+nav.main>.tab.active
+{
+  z-index:+5000;
+}
+nav.main>.tab.active>span
+{
+  background:#d5d5d5;
+}
+nav.main>.tab>span
+{
+  width:100%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  height:100%;
+  display:block;
+  transform:line-height 0.2s;
+}
+nav.main>.tab:not(.active)>span:hover
+{
+  background:#dadada;
+}
+nav.main>.tab:after
+{
+  content:"";
+  top:0;
+  right:0;
+  position:absolute;
+  border-top:0px solid transparent;
+  border-bottom:50px solid transparent;
+  border-right:0px solid rgba(0,0,0,0.05);
+  transition:all 0.2s;
+}
+nav.main>.tab:hover:after
+{
+  content:"";
+  right:0;
+  position:absolute;
+  border-top:0px solid transparent;
+  border-bottom:55px solid transparent;
+  border-right:10px solid rgba(0,0,0,0.1);
+}
+/*End of Section*/
+
+/*Ripple Styling*/
+.ripple
+{
+  position:fixed;
+  animation:ripple 1s 1 ease-out;
+  background:rgba(0,0,0,0.5);
+  margin:-250px;
+  width:500px;
+  height:500px;
+  transform:scale(10);
+  position:absolute;
+  border-radius:50%;
+  opacity:0;
+}
+  
+/*One for the BIIIIG ONE!*/
+
+.mega.ripple
+{
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  opacity:1;
+}
+@keyframes ripple
+{
+  0%{
+    opacity:1;
+    transform:scale(0);
+  }
+}
+/*End of Section*/
+
+/*This one Wraps content of the tabs*/
+#content_wrapper.inactive
+{
+ pointer-events:none; 
+}
+#content_wrapper
+{
+  position:fixed;
+  z-index:+20;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  display:block;
+  perspective:1000px;
+}
+#content_wrapper>div.content
+{
+  z-index:+50;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  display:block;
+  box-sizing:border-box;
+  padding:5%;
+  padding-top:100px;
+}
+#content_wrapper>div.clone.deactivate
+{
+   background:linear-gradient(#14151a,#161725); 
+}
+#content_wrapper>div.clone.deactivate>span{
+  font-size:50em;
+  opacity:0;
+  animate:blow 0.5s 0s cubic-bezier(0,0,0,1);
+}
+@keyframes blow
+{
+  to{
+    font-size:50em;
+    opacity:0;
+  }
+}
+#content_wrapper>div.clone.deactivate:before
+{
+  animation:fadeOut 0.25s 0s 1 cubic-bezier;
+  opacity:0;
+}
+@keyframes fadeOut
+{
+  from{
+    opacity:1;
+  }
+}
+#content_wrapper>div.clone
+{
+  width:100%;
+  height:100%;
+  transform-origin:50% 50%;
+  position:absolute;
+  transform-origin:50% 50%;
+  transform:translate(-50%,-50%) rotateY(180deg);
+  animation:flipOpen 0.5s 0s 1 cubic-bezier(0,0,0,1);
+}
+
+#content_wrapper.inactive>div.clone
+{
+  animation:flipClose 0.7s 0s 1 cubic-bezier(0,0,0,1);
+  transform:translate(-50%,-50%);
+  position:absolute;
+}
+@keyframes flipOpen
+{
+  from{
+    transform:translate(-50%,-50%);
+  }
+}
+@keyframes flipClose
+{
+  from{
+    transform:translate(-50%,-50%) rotateY(180deg);
+  }
+}
+#content_wrapper>div.content>section.active
+{
+  opacity:1;
+  transform:none;
+  z-index:1000;
+  /*display: unset;*/
+}
+
+#content_wrapper>div.content>section{
+  color:#aaa;
+  position:absolute;
+  top:100px;
+  left:5%;
+  opacity:0;
+  transition:all 0.5s;
+  transform:translateY(-100px);
+  z-index:-1000;
+}
+#content_wrapper.inactive>button
+{
+  opacity:0;
+  z-index:1000;
+}
+
+#content_wrapper>button
+{
+  z-index:+100;
+  transition:opacity 0.2s 1s;
+  padding:20px;
+  font-family:"FontAwesome";
+  color:white;
+  font-size:1.2em;
+  background:none;
+  outline:none;
+  border:none;
+  position:fixed;
+  top:60px;
+  right:0;
+  cursor:pointer;
+}
+/*End of Section*/
+
+/*Footer Design*/
+#footer
+{
+  font-size:0.9em;
+  position:relative;
+  margin-top:200px;
+  margin-bottom:30px;
+
+  width:100%;
+  height:70px;
+  text-align:center;
+  color:rgba(255,255,255,0.3);
+  z-index:+15;
+}
+#footer:before
+{
+  position:absolute;
+  top:0;
+  height:3px;
+}
+#footer:after
+{
+  position:absolute;
+  bottom:1px;
+  top:unset;
+  height:3px;
+}
+
+/*End of Section*/
+  </style>
+
+  <script type="text/javascript">
+  </script>
+</head>
+
+<body style="width:100%">
+<div class="loader-wrapper">
+<div class="loader"></div>
+
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div>
+<style type="text/css">
+  .loader-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 100000000;
+}
+.loader-wrapper .loader {
+display: block;
+position: relative;
+left: 50%;
+top: 50%;
+width: 100px;
+height: 100px;
+margin-top: -50px;
+margin-left: -50px;
+border: 3px solid transparent;
+border-top-color: #F44336;
+border-radius: 50%;
+z-index: 1001;
+-webkit-animation: spin 1.5s infinite linear;
+      animation: spin 1.5s infinite linear;
+}
+.loader-wrapper .loader:before, .loader-wrapper .loader:after {
+content: '';
+position: absolute;
+border-radius: 50%;
+}
+.loader-wrapper .loader:before {
+top: 5px;
+left: 5px;
+right: 5px;
+bottom: 5px;
+border: 3px solid transparent;
+border-top-color:#F44336;
+-webkit-animation: spin 2s infinite linear;
+      animation: spin 2s infinite linear;
+}
+.loader-wrapper .loader:after {
+top: 15px;
+left: 15px;
+right: 15px;
+bottom: 15px;
+border: 3px solid transparent;
+border-top-color: #F44336;
+-webkit-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+0% {
+-webkit-transform: rotate(0);
+        transform: rotate(0);
+}
+100% {
+-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+}
+
+@keyframes spin {
+0% {
+-webkit-transform: rotate(0);
+        transform: rotate(0);
+}
+100% {
+-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+}
+/*Section */
+.loader-section {
+position: fixed;
+top: 0;
+width: 51%;
+height: 100%;
+background: #ffffff;
+z-index: 1000;
+}
+.loader-section.section-left {
+left: 0;
+}
+.loader-section.section-right {
+right: 0;
+}
+
+/*Finished Loading Styles*/
+.loaded .section-left {
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+-webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+}
+.loaded .section-right {
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+-webkit-transform: translateX(100%);
+      transform: translateX(100%);
+}
+.loaded .loader {
+-webkit-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+opacity: 0;
+}
+.loaded .loader-wrapper {
+visibility: hidden;
+-webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+-webkit-transition: all 0.3s 1s ease-out;
+transition: all 0.3s 1s ease-out;
+}
+
+/*
+*/
+
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+    setTimeout(function(){
+        $('body').addClass('loaded');
+    }, 3000);
+});
+</script>
+<div id="particles-js"><script src="particles.min.js"></script>
+<style type="text/css">
+/* ---- reset ---- */  /* ---- particles.js container ---- */ #particles-js{ position:fixed; width: 100%; height: 100%;z-index:-1000000000; background-color: #ffffff; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+</style>
+<script type="text/javascript">
+particlesJS("particles-js", {"particles":{"number":{"value":34,"density":{"enable":true,"value_area":800}},"color":{"value":"#eb2b2b"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":5,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}); count_particles = document.querySelector('.js-count-particles'); 
+</script> 
+
+</div> 
+  <nav class='main hList inactive'>
+      <div class="tab"><span>ABOUT</span></div><!--
+  --><div class="tab"><span>PRECAUTIONS</span></div><!--
+  --><div class="tab"><span>MYTH BUSTERS</span></div><!--
+  --><div class="tab" ><span>NEWS</span></div><!--
+  --><div class="tab" ><span>WORLD ANALYTICS</span></div><!--
+  --><div class="tab" ><span> COUNTRY ANALYTICS </span></div><!--
+  --><div class="tab" ><span>FAQs</span></div><!--
+  --><div class="tab" ><span>IMPORTANT LINKS</span></div><!--
+  --> 
+</nav>
+<page id="home" style="margin-bottom:-15%">
+  
+  <section class="header" style="text-align: center;height:25vh">
+    <div style="align-content:center">
+      <h2 style="color:red"><span>C</span><span>&nbsp;ORONA VIRUS </span></h2>
+      <h5 style="color:black"><b>REALTIME-ANALYTICS</b></h5>
+    </div>
+    <div class='logo'></div>
+  </section>
+  <div >    
+  <section id="grid_wrapper" class="init" style="height:75vh">
+    <card>
+      <div>
+        <span>ABOUT</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>PRECAUTIONS</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>MYTH BUSTERS</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>NEWS</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>WORLD ANALYTICS</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>COUNTRY ANALYTICS</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>FAQs</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>IMPORTANT LINKS</span>
+      </div>
+    </card>
+  </section>
+  </div>
+  <div style="width:100%;margin-right:40px;background-color:rgba(9,20,60,0.75);padding-bottom:3%">
+                <br>
+                <br>
+
+       
+        <div class="row" style="color: white;margin:60px">
+            <div class="col-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+              <center>
+                
+                <h1 class="glowing-text"><u>FOLLOW THE MOVEMENT</u></h1>
+                <br>
+                <br>
+                <h4 style="font-family:Verdana">Stay at Home <img src="https://image.flaticon.com/icons/svg/2771/2771418.svg" height="40px" alt="🇮🇳"> to Flatten the Curve !</h4>
+                <!-- <h4 style="font-family:Verdana"></h4> -->
+
+                <!-- <h4> and </h4> -->
+                <br>
+                <br>
+                <br>
+
+                <iframe style="border-radius:20px" width="90%" height="350px" src="https://www.youtube.com/embed/fgBla7RepXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              </center>
+                
+            </div>
+            <div class="col-6" style="padding-left:40px">
+              <center>
+                
+                <h1 class="glowing-text2"><u>DONATE IF YOU CAN </u></h1>
+                <br>
+                <br>
+
+                <h4> Donate <img src="https://image.flaticon.com/icons/svg/838/838618.svg" height="40px" alt="🇮🇳"> to the <a href="https://www.pmindia.gov.in/en/?query#">"PM CARES" </a> fund and contribute in making a difference ! </h4>
+                <br>
+                
+             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It is my appeal to my fellow Indians, <br><br>Kindly contribute to the PM-CARES Fund. This Fund will also cater to similar distressing situations, if they occur in the times ahead. This link has all important details about the fund. <a href="https://t.co/enPvcqCTw2">https://t.co/enPvcqCTw2</a></p>&mdash; Narendra Modi (@narendramodi) <a href="https://twitter.com/narendramodi/status/1243861073444237314?ref_src=twsrc%5Etfw">March 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+              </center>
+            </div>
+        </div>
+        <style type="text/css">
+          .glowing-text{
+            color:#fff;
+            /*font-size:8em;*/
+            /*position:absolute;*/
+/*            top:50%;
+            left:50%;*/
+            /*transform:translate(-50%,-50%);*/
+            /*margin:0;*/
+            text-shadow: 0px -1px 2px white,
+            0px -3px 6px rgba(255,200,200,1),
+            0px -6px 12px rgba(255,150,100,1),
+            0px -10px 20px rgba(255,100,100,1),
+            0px -15px 30px rgba(255,50,50,1),
+            0px -21px 42px rgba(255,0,0,1);
+            animation:fire 10s ease infinite,colorSpin 10s linear infinite;
+            /*font-family:Sans-serif;*/
+            
+          }
+          @keyframes fire{
+            50%{
+              text-shadow:0px -4px 8px white,
+            0px -12px 24px rgba(255,200,200,1),
+            0px -24px 48px rgba(255,150,100,1),
+            0px -40px 80px rgba(255,100,100,1),
+            0px -60px 120px rgba(255,50,50,1),
+            0px -84px 168px rgba(255,0,0,1);
+            
+              }
+          }
+
+          @keyframes colorSpin{
+            to{filter:hue-rotate(360deg)}
+          }
+          .glowing-text2{
+            color:#fff;
+            /*font-size:8em;*/
+            /*position:absolute;*/
+/*            top:50%;
+            left:50%;*/
+            /*transform:translate(-50%,-50%);*/
+            /*margin:0;*/
+            text-shadow: 0px -1px 2px white,
+            0px -3px 6px rgba(255,200,200,1),
+            0px -6px 12px rgba(255,150,100,1),
+            0px -10px 20px rgba(255,100,100,1),
+            0px -15px 30px rgba(255,50,50,1),
+            0px -21px 42px rgba(255,0,0,1);
+            animation:fire 10s ease infinite,colorSpin 10s linear infinite;
+            /*font-family:Sans-serif;*/
+            
+          }
+          @keyframes fire{
+            50%{
+              text-shadow:0px -4px 8px white,
+            0px -12px 24px rgba(255,200,200,1),
+            0px -24px 48px rgba(255,150,100,1),
+            0px -40px 80px rgba(255,100,100,1),
+            0px -60px 120px rgba(255,50,50,1),
+            0px -84px 168px rgba(255,0,0,1);
+            
+              }
+          }
+
+          @keyframes colorSpin{
+            to{filter:hue-rotate(360deg)}
+          }
+        </style>
+         <br>
+
+         <div class="row" style="width:80%;margin:0px;margin-left:10%">
+          <center>
+            <div class="alert alert-primary alert-dismissible" role="alert">
+                <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close"
+                    data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <strong><i class="fa fa-alert"></i> </strong>
+                <marquee>
+                    <p style="font-family: Impact; font-size: 22pt">Lets fight Corona together by following these simple rules and doing our best to impede the spread of the virus -- STAY SAFE !! </p>
+                </marquee>
+            </div>
+            </center>
+        </div>
+</div>
+
+</page>
+<div id="content_wrapper" class='inactive'>
+  <button class="close">&#xf00d;</button>
+  <div class='content' style="overflow:scroll">
+    <section style="font-family:Helvetica;font-size:17px">
+     <h1>CORONA VIRUS - COVID 19 <span id="virus">🦠</span></h1>
+      <br>
+      
+      <div class="row">
+        <div class="col-6">
+          <br>
+          <br>
+         <p ><b><i>Coronavirus disease (COVID-19)</i></b> is an infectious disease caused by a newly discovered coronavirus named as severe acute respiratory syndrome coronavirus a.k.a <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2"> (SARS-CoV-2)</a>. <br>
+          The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow). <br>
+          At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. 
+        </p>
+        <br>
+        <h4><b>SYMPTOMS</b></h4>
+        <p>Reported illnesses have ranged from mild symptoms to severe illness and death for confirmed coronavirus disease cases.<br>
+        These symptoms may appear 2-14 days after exposure (based on the incubation period of MERS-CoV viruses).</p>
+        <ul>
+          <li>Fever</li>
+          <li>Cough</li>
+          <li>Shortness of Breath</li>
+        </ul>
+        <br>
+        <div style="background:lightblue;padding:20px;color:black;" id="medical">
+           <h4>When to Seek Medical Attention ? <img src="https://image.flaticon.com/icons/svg/2741/2741111.svg" width="30px"></h4>
+           <p>
+            If you develop <b>emergency warning signs</b> for COVID-19 get medical attention immediately. <b>Emergency warning signs</b> include*:
+        </p>
+          <ul>
+            <li>Trouble breathing</li>
+            <li>Persistent pain or pressure in the chest</li>
+            <li>New confusion or inability to arouse</li>
+            <li>Bluish lips or face</li>
+          </ul>
+          <p>*This list is not all inclusive. Please consult your medical provider for any other symptoms that are severe or concerning.</p>
+
+        </div>
+        <style type="text/css">
+          #medical
+          {
+            -moz-box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+          }
+        </style> 
+       
+
+        </div>
+        <div class="col-6">
+          <iframe width="90%" height="400px" src="https://www.youtube.com/embed/BtN-goy9VOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+         <!--  <iframe width="500px" height="400px" src="https://www.youtube.com/embed/oGruT7Fd54E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-fever.png" width="30%">
+          <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-cough.png" width="30%">
+          <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortnessOfBreath.png" width="30%">
+
+        </div>
+      </div>
+    </section>
+    <section style="width:100%;height:100%">
+      <center>
+            <h1 style="margin-left:-10%;">Accordion of Precautions <img src="https://image.flaticon.com/icons/svg/2104/2104778.svg" alt="🇮🇳" width="70px"></h1>
+            <h5 style="margin-left:-10%;"><i> (Click on the Tabs to preview Tips !)</i></h5>
+            <br>
+             <div class="accordion">
+                <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>How to Wash your Hands?</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-1.tmb-1920v.png?sfvrsn=3d15aa1c_1" height="100%" width="100%"></div> 
+                     <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>When to Wash your Hands?</span></div>
+               <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-2.tmb-1920v.png?sfvrsn=2bc43de1_1" height="100%" width="100%"></div> 
+                     <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Personal Hygiene</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-3.tmb-1920v.png?sfvrsn=b1ef6d45_1" height="100%" width="100%"></div>  
+                     <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Collective Hygiene</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-4.tmb-1920v.png?sfvrsn=a5317377_5" height="100%" width="100%"></div>  
+                     <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Travelling Tips #1</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stay-healthy-while-travelling/1.tmb-1920v.png?sfvrsn=1a813eed_4" height="100%" width="100%"></div>  
+                 <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Travelling Tips #2</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stay-healthy-while-travelling/2.tmb-1920v.png?sfvrsn=13250c49_4" height="100%" width="100%"></div> 
+                 <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Travelling Tips #3</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stay-healthy-while-travelling/3.tmb-1920v.png?sfvrsn=5e5a641_4" height="100%" width="100%"></div> 
+                 <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Travelling Tips #4</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stay-healthy-while-travelling/4.tmb-1920v.png?sfvrsn=9719c641_4" height="100%" width="100%"></div> 
+                 <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Stress Management</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/stress.tmb-1920v.jpg?sfvrsn=b8974505_5" height="100%" width="100%"></div> 
+                <input type="radio" name="select" class="accordion-select"  >
+                <div class="accordion-title"><span>Social Tips #1</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/safe-greetings.tmb-1920v.png?sfvrsn=2e97004e_1" height="100%" width="100%"></div> 
+                <input type="radio" name="select" class="accordion-select"  >
+                <div class="accordion-title"><span>Social Tips #2</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/handshaking.tmb-1920v.png?sfvrsn=4aed53c5_1" height="100%" width="100%"></div> 
+                 <input type="radio" name="select" class="accordion-select" >
+                <div class="accordion-title"><span>Being Aware and Ready</span></div>
+                <div class="accordion-content"><img src="https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/be-ready-social-3.tmb-1920v.jpg?sfvrsn=1706a18f_6" height="100%" width="100%"></div> 
+
+            </div> 
+      </center>
+            <style>
+                  .accordion {
+                  box-sizing: border-box;
+                  display: flex;
+                  font-family: Arial, Helvetica, sans-serif;
+                  overflow: hidden;
+                  width: 500px;
+                  margin-left:-10%;
+              }
+
+              .accordion-select {
+                  cursor: pointer;
+                  margin: 0;
+                  opacity: 0;
+                  z-index: 1;
+              }
+
+              .accordion-title {
+                  position: relative;
+              }
+
+              .accordion-title:not(:nth-last-child(2))::after {
+                  border: 1px solid transparent;
+                  bottom: 0;
+                  content: '';
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+              }
+
+              .accordion-title span {
+                  bottom: 0px;
+                  box-sizing: border-box;
+                  display: block;
+                  position: absolute;
+                  white-space: nowrap;
+                  width: 100%;
+              }
+
+              .accordion-content {
+                  box-sizing: border-box;
+                  overflow: auto;
+                  position: relative;
+                  transition: margin 0.3s ease 0.1s;
+              }
+
+              .accordion-select:checked + .accordion-title + .accordion-content {
+                  margin-bottom: 0;
+                  margin-right: 0;
+              }
+
+              /* Generated styles starts here */
+
+              .accordion {
+                  border-color: #484f52;
+                  border-radius: 32px;
+                  border-style: solid;
+                  border-width: 1px;
+                  flex-direction: column;
+                  height: auto;
+              } 
+
+              .accordion-title,
+              .accordion-select  {
+                  background-color: #79bcff;
+                  color: #ffffff;
+                  width: 100%;
+                  height: 65px;
+                  font-size: 19px;
+              }
+
+              .accordion-select {
+                  margin-bottom: -65px;
+                  margin-right: -65px;
+              }
+
+              .accordion-title:not(:nth-last-child(2))::after {
+                  border-bottom-color: #528fcc;
+                  border-right-color: transparent;
+              } 
+
+              .accordion-select:hover + .accordion-title,
+              .accordion-select:checked + .accordion-title {
+                  background-color: #378ee5;
+              } 
+
+               .accordion-title span  { 
+                  transform: rotate(0deg);
+                  -ms-writing-mode: lr-tb;
+                  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+                  padding-left: 33px;
+                  padding-right: 33px;
+                  line-height: 65px;
+              } 
+
+              .accordion-content {
+                  background-color: #ffffff;
+                  color: #484f52;
+                  height: 400px;
+                  margin-bottom: -400px;
+                  margin-right: 0;
+                  /*padding: 27px;*/
+                  width: 100%;
+              } 
+              </style>
+    </section>
+   <script type="text/javascript">
+          var allRadios = document.getElementsByName('select');
+          var booRadio;
+          var x = 0;
+          for(x = 0; x < allRadios.length; x++){
+            allRadios[x].onclick = function() {
+              if(booRadio == this){
+                this.checked = false;
+                booRadio = null;
+              } else {
+                booRadio = this;
+              }
+            };
+          }
+   </script>
+    <section style="font-family:Helvetica">
+      <div class="container gallery-container">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+        <link rel="stylesheet" href="css/gallery-grid.css">
+        <h1>COVID-19 Virus Myths Decoded !</h1>
+
+        <p class="page-description text-center">From the evidence so far, the COVID-19 virus can be transmitted in ALL
+            AREAS, including areas with hot and humid weather. Regardless of climate, adopt protective measures if you
+            live in, or travel to an area reporting COVID-19. The best way to protect yourself against COVID-19 is by
+            frequently cleaning your hands. By doing this you eliminate viruses that may be on your hands and avoid
+            infection that could occur by then touching your eyes, mouth, and nose.</p>
+        <center> <b>
+                <p class="page-description text-center">" This Page gives you clear Idea about some of the prevalent Myths surrounding the spread of 
+                    COVID-19 "</p>
+        </center></b>
+
+        <center>
+            <b>
+                <p>(Click on the images for full screen view)</p>
+            </b>
+        </center>
+        <div class="tz-gallery">
+
+            <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/1.png">
+                            <img src="mythbuster/1.png" alt="Park">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/2.png">
+                            <img src="mythbuster/2.png" alt="Bridge">
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <a class="lightbox" href="mythbuster/3.png">
+                            <img src="mythbuster/3.png" alt="Tunnel">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/4.png">
+                            <img src="mythbuster/4.png" alt="Coast">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/5.png">
+                            <img src="mythbuster/5.png" alt="Rails">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/6.png">
+                            <img src="mythbuster/6.png" alt="Traffic">
+                        </a>
+                    </div><br><br>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/7.png">
+                            <img src="mythbuster/7.png" alt="Rocks">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/8.png">
+                            <img src="mythbuster/8.png" alt="Benches">
+                        </a>
+                    </div>
+
+
+                
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/9.png">
+                            <img src="mythbuster/9.png" alt="Park">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/10.png">
+                            <img src="mythbuster/10.png" alt="Bridge">
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <a class="lightbox" href="mythbuster/11.png">
+                            <img src="mythbuster/11.png" alt="Tunnel">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/12.png">
+                            <img src="mythbuster/12.png" alt="Coast">
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/13.png">
+                            <img src="mythbuster/13.png" alt="Rails">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/14.png">
+                            <img src="mythbuster/14.png" alt="Traffic">
+                        </a>
+                    </div>
+                     <div class="col-sm-12 col-md-4">
+                        <a class="lightbox" href="mythbuster/15jpg.jpg">
+                            <img src="mythbuster/15jpg.jpg" alt="Tunnel">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/16jpg.jpg">
+                            <img src="mythbuster/16jpg.jpg" alt="Coast">
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/17jpg.jpg">
+                            <img src="mythbuster/17jpg.jpg" alt="Rails">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="mythbuster/18jpg.jpg">
+                            <img src="mythbuster/18jpg.jpg" alt="Traffic">
+                        </a>
+                    </div><br><br>
+                    <br><br>
+
+            </div>
+            <center><h5><i>Source: <b>WHO</b>(WORLD HEALTH ORGANIZATION)</h5></i></center>
+        </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js"></script>
+
+            <script>
+                baguetteBox.run('.tz-gallery');
+              </script>
+      </div>
+    </section>
+    <section  style="width:100%">
+      <center>
+        <div class="row" style="width:100%;margin-left:-5%">
+          <div class="col-6" style="padding:0px;margin-left:-5%">
+            <h2>Local COVID 19 News</h2>
+            <iframe width="80%" height="600px" src="https://www.inoreader.com/stream/user/1004988184/tag/COVID-19%20India/view/html?cs=m" frameborder="0" tabindex="-1" ></iframe>
+          </div>
+          <div class="col-6" style="padding:0px">
+            <h2>Global COVID 19 News</h2>
+            <iframe width="80%" height="600px" src="https://www.inoreader.com/stream/user/1004988184/tag/COVID-19%20India%20Google%20News/view/html?cs=m" frameborder="0" tabindex="-1"></iframe>
+          </div>
+        
+          
+        </div>
+      </center>
+    </section>
+    <section style="overflow:scroll">
+   
+
+    <div class="row" style="text-align:center">
+      <div style="margin-left:10%"><h1> Corona Virus Cases Across the Globe 🌎 <span id="virus">🦠</span></h1>  </div>
+       <br>
+    <br> <br> 
+    <div class="col-6">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="regions_div" style="margin-left:-10px;width:100%;height:500px;z-index:1000"></div>
+
+<!--     <style type="text/css">
+
+      @media screen and (max-width:1280px) {
+          #region_div {
+            width:500px;
+          }
+        }
+
+    </style> -->
+    <script type="text/javascript">
+            google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+    
+      var arrs="{{arrforgraph}}";
+      var aars=decodeURI(arrs);
+      // console.log(arrs);
+      aars=JSON.parse(aars);
+      arrs=aars["data"];
+
+      arrs.forEach(myFunction);
+
+
+      function myFunction(value, index, array) {
+
+        if(arrs[index][0]=="USA")
+        {
+          arrs[index][0]="US";
+        }
+        if(arrs[index][0]=="UK")
+        {
+           arrs[index][0]="United Kingdom";
+        }
+        if(arrs[index][0]=="S. Korea")
+        {
+           arrs[index][0]="South Korea";
+        }
+
+        var x=parseFloat(arrs[index][1].replace(/,/g, ''));
+        arrs[index][1]=x;
+        x=parseFloat(arrs[index][2].replace(/,/g, ''));
+        arrs[index][2]=x;
+        // x=parseFloat(arrs[index][3].replace(/,/g, ''));
+        // arrs[index][3]=x;
+
+      }
+      console.log(arrs);
+      arrs.unshift(["Country","Cases","Deaths"]);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable(arrs);
+        // [
+        // ["Country","Cases","Deaths"], 
+        // [ 'Ireland', '3,447', '85' ],
+        // [ 'Denmark', '3,092', '104' ],
+        // [ 'Chile', '3,031', '16' ],
+        // [ 'Malaysia', '2,908', '45' ],
+        // [ 'Russia', '2,777', '24']
+        // ]
+        var options = {sizeAxis: { minValue: 0, maxValue: 100 },colorAxis: {colors: ['#43cea2', '#185a9d']},backgroundColor: '#def5ff'};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+
+      $(window).resize(function(){
+          drawRegionsMap();
+        });
+    </script>
+    </div>
+    <div class="col-6">
+          <section id="statistic" class="statistic-section one-page-section" style="z-index:2;width:90%">
+              <div class="container">
+                  <div class="row text-center">
+                      <div class="col">
+                          <div class="counter">
+                             <i class="fas fa-virus fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{tc}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Infected Cases</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                              <i class="fas fa-skull fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{td}}
+                              </h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Deaths</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                              <i class="fas fa-first-aid fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{tr}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Recovered Cases</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                             <img src="https://image.flaticon.com/icons/svg/2746/2746311.svg" style="height:45px;color:white">
+                              <h2 class="timer count-title count-number">{{tnc}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total New Cases</p>
+                          </div>
+                      </div>
+                    <div class="col">
+                          <div class="counter">
+                             <img src="https://image.flaticon.com/icons/svg/2747/2747741.svg" style="height:45px;color:white">
+                              <h2 class="timer count-title count-number">{{tnd}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total New Deaths</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <style type="text/css">
+            .statistic-section {
+
+             padding-top: 30px;
+             padding-bottom: 1  0px;
+             background: #00c6ff;  /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+             background: linear-gradient(to right, #0072ff, #00c6ff); 
+             width:550px  ;
+              }
+
+              .count-title {
+                  font-size: 50px;
+                  font-weight: normal;
+                  margin-top: 10px;
+                  margin-bottom: 0;
+                  text-align: center;
+                  font-weight: bold;
+                  color: #fff;
+              }
+
+              .stats-text {
+                  font-size: 15px;
+                  font-weight: normal;
+                  margin-top: 15px;
+                  margin-bottom: 50px;
+                  text-align: center;
+                  color: #fff;
+                  text-transform: uppercase;
+                  font-weight: bold;
+              }
+
+              .stats-line-black {
+                margin: 12px auto 0;
+                  width: 55px;
+                  height: 2px;
+                  background-color: #fff;
+              }
+              .stats-icon {
+                  font-size: 35px;
+                  margin: 0 auto;
+                  float: none;
+                  display: table;
+                  color: #fff;
+              }
+
+              @media (max-width: 992px) {
+                .counter {
+                  margin-bottom:0;
+                }
+              }
+          </style>
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
+    </div>
+    
+    </div>
+    </section>
+    <section>
+<!--          <p>nice</p> -->
+
+    <div class="row slideDiv1" style="text-align:center">
+      <div style="margin-left:10%"><h1 >Corona Virus Cases Across India <img src="https://img.icons8.com/doodle/48/000000/india.png" alt="🇮🇳"> <span id="virus">🦠</span></h1>  </div>
+       <br>
+    <br> <br> 
+    <div class="col-6">
+    
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/in/custom/in-all-disputed.js"></script>
+
+    <div id="container" style="width:100%;height:450px;margin-left:0px"></div>
+
+    
+    <script type="text/javascript">
+            // Prepare demo data
+            // Data is joined to map using value of 'hc-key' property by default.
+            // See API docs for 'joinBy' for more info on linking data and map.
+
+            var arrrs="{{arrforstate}}";
+            var aarrs=decodeURI(arrrs);
+            // console.log(aars);
+            aarrs=JSON.parse(aarrs);
+            arrrs=aarrs["data"];
+            // console.log(arrs);
+
+            arrrs.forEach(myFunctionn);
+            var mapp = {}
+
+
+            function myFunctionn(value, index, array) {
+
+              if(arrrs[index][0]=="Delhi")
+              {
+                arrrs[index][0]="nct of delhi";      
+              }
+              if(arrrs[index][0]=="Andaman and Nicobar Islands")
+              {
+                 arrrs[index][0]="andaman and nicobar";
+              }
+              if(arrrs[index][0]=="Telengana")
+              {
+                 arrrs[index][0]="telangana";
+              }
+              var y= arrrs[index][0].toLowerCase();
+              arrrs[index][0]= y;
+              arrrs[index][1]=(arrrs[index][1]+arrrs[index][2]);
+             
+            }
+
+
+            arrrs.forEach(myfc);
+
+            function myfc(v,index,a)
+            {
+               mapp[arrrs[index][0]]={'cases':arrrs[index][1],'deaths':arrrs[index][3],'recovery':arrrs[index][4]};
+            }
+
+
+            console.log(mapp);
+            var data =[...arrrs];
+
+            
+            /* console.log(mapp); */
+            // Create the chart
+            var charr=Highcharts.mapChart('container', {
+              chart: {
+                map: 'countries/in/custom/in-all-disputed'
+              },
+               tooltip: {
+                  formatter: function() {
+                     var s ='<b>'+ this.key+'</b>' + '<br>';
+                    s+='Cases:'+'<b>'+mapp[this.point["hc-key"]]['cases']+'</b>'+'<br>';
+                    s+='Deaths:'+'<b>'+mapp[this.point["hc-key"]]['deaths']+'</b>'+'<br>';
+                    s+='Recovered:'+'<b>'+mapp[this.point["hc-key"]]['recovery']+'</b>'+'<br>';
+                     return s;
+                  },
+                  valueSuffix: ''
+                },
+              title:{
+                text:''
+              },
+              legend:{
+                align:'left',
+                layout:'vertical'
+              },
+              mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                  verticalAlign: 'bottom'
+                }
+              },
+
+              colorAxis: {
+                minColor: '#b5ffe8',
+                maxColor: '#09529c'
+              },
+
+              series: [{
+                data: data,
+                name: 'Random data',
+                borderColor: 'black',
+                 borderWidth: 0.2,
+                states: {
+                  hover: {
+                    color: '#BADA55'
+                  }
+                },
+                dataLabels: {
+                  enabled: false,
+                  format: '{point.name}'
+                }
+              }]
+            });
+            $(document).ready(function() {
+             // executes when HTML-Document is loaded and DOM is ready
+             charr.reflow();
+            });
+            
+    </script>
+    <style type="text/css">
+      /*#container {
+          height: 600px; 
+          min-width: 710px; 
+          max-width: 800px; 
+          margin: 0 auto; 
+      }
+*/      .loading {
+          margin-top: 0em;
+          text-align: center;
+          color: black;
+      }
+
+    </style>
+    </div>
+    <div class="col-6"  >
+          <section id="statistic1" class="statistic-section one-page-section" style="margin-left:20px;width:90%">
+              <div class="container">
+                  <div class="row text-center">
+                      <div class="col-6">
+                          <div class="counter">
+                             <i class="fas fa-virus fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itc}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Infected Cases</p>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="counter">
+                              <i class="fas fa-skull fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itd}}
+                              </h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Deaths</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                              <i class="fas fa-first-aid fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itr}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Recovered Cases</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                             <img src="https://image.flaticon.com/icons/svg/2513/2513710.svg" style="height:35px;color:white">
+                              <h2 class="timer count-title count-number">{{itic}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Confirmed Indian Cases</p>
+                          </div>
+                      </div>
+                    <div class="col">
+                          <div class="counter">
+                            <img src="https://image.flaticon.com/icons/svg/2746/2746312.svg" style="height:35px;color:white">
+                              <h2 class="timer count-title count-number">{{itfc}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Confirmed Foreign Cases</p>
+                          </div>
+                      </div>
+            
+                  </div>
+              </div>
+          </section>
+          <style type="text/css">
+            .statistic-section {
+
+             padding-top: 30px;
+             padding-bottom: 10px;
+             background: #00c6ff;  /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+             background: linear-gradient(to right, #0072ff, #00c6ff); 
+             width:550px  ;
+              }
+
+              .count-title {
+                  font-size: 50px;
+                  font-weight: normal;
+                  margin-top: 10px;
+                  margin-bottom: 0;
+                  text-align: center;
+                  font-weight: bold;
+                  color: #fff;
+              }
+
+              .stats-text {
+                  font-size: 15px;
+                  font-weight: normal;
+                  margin-top: 15px;
+                  margin-bottom: 50px;
+                  text-align: center;
+                  color: #fff;
+                  text-transform: uppercase;
+                  font-weight: bold;
+              }
+
+              .stats-line-black {
+                margin: 12px auto 0;
+                  width: 55px;
+                  height: 2px;
+                  background-color: #fff;
+              }
+              .stats-icon {
+                  font-size: 35px;
+                  margin: 0 auto;
+                  float: none;
+                  display: table;
+                  color: #fff;
+              }
+
+              @media (max-width: 992px) {
+                .counter {
+                  margin-bottom:0;
+                }
+              }
+          </style>
+    </div>
+    
+    </div>
+ 
+<!-- UNOFFICIAL SOURCE -->
+
+    <div class="row slideDiv2 noDisplay" style="text-align:center">
+      <div style="margin-left:10%"><h1 >Corona Virus Cases Across India <img src="https://img.icons8.com/doodle/48/000000/india.png" alt="🇮🇳"> <span id="virus">🦠</span></h1>  </div>
+       <br>
+    <br> <br> 
+    <div class="col-6">
+    
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/in/custom/in-all-disputed.js"></script>
+
+    <div id="containersss" style="width:100%;height:450px;margin-left:0px"></div>
+
+    
+    <script type="text/javascript">
+            // Prepare demo data
+            // Data is joined to map using value of 'hc-key' property by default.
+            // See API docs for 'joinBy' for more info on linking data and map.
+
+            var arrrs_unoff="{{arrforstate_unoff}}";
+            var aarrs_unoff=decodeURI(arrrs_unoff);
+            // console.log(aars);
+            aarrs_unoff=JSON.parse(aarrs_unoff);
+            arrrs_unoff=aarrs_unoff["data"];
+            // console.log(arrs);
+
+            arrrs_unoff.forEach(myFunctionn_unoff);
+            var mapp_unoff = {}
+
+
+            function myFunctionn_unoff(value, index, array) {
+
+              if(arrrs_unoff[index][0]=="Delhi")
+              {
+                arrrs_unoff[index][0]="nct of delhi";      
+              }
+              if(arrrs_unoff[index][0]=="Andaman and Nicobar Islands")
+              {
+                 arrrs_unoff[index][0]="andaman and nicobar";
+              }
+              if(arrrs_unoff[index][0]=="Telengana")
+              {
+                 arrrs_unoff[index][0]="telangana";
+              }
+              var y= arrrs_unoff[index][0].toLowerCase();
+              arrrs_unoff[index][0]= y;
+              // arrrs[index][1]=(arrrs[index][1]+arrrs[index][2]);
+             
+            }
+
+
+            arrrs_unoff.forEach(myfc_unoff);
+
+            function myfc_unoff(v,index,a)
+            {
+               mapp_unoff[arrrs_unoff[index][0]]={'cases':arrrs_unoff[index][1],'deaths':arrrs_unoff[index][3],'recovery':arrrs_unoff[index][2]};
+            }
+
+
+            console.log(mapp_unoff);
+            var data_unoff =[...arrrs_unoff];
+
+            
+            /* console.log(mapp); */
+            // Create the chart
+            var charr_unoff=Highcharts.mapChart('containersss', {
+              chart: {
+                map: 'countries/in/custom/in-all-disputed'
+              },
+               tooltip: {
+                  formatter: function() {
+                     var s ='<b>'+ this.key+'</b>' + '<br>';
+                    s+='Cases:'+'<b>'+mapp_unoff[this.point["hc-key"]]['cases']+'</b>'+'<br>';
+                    s+='Deaths:'+'<b>'+mapp_unoff[this.point["hc-key"]]['deaths']+'</b>'+'<br>';
+                    s+='Recovered:'+'<b>'+mapp_unoff[this.point["hc-key"]]['recovery']+'</b>'+'<br>';
+                     return s;
+                  },
+                  valueSuffix: ''
+                },
+              title:{
+                text:''
+              },
+              legend:{
+                align:'left',
+                layout:'vertical'
+              },
+              mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                  verticalAlign: 'bottom'
+                }
+              },
+
+              colorAxis: {
+                minColor: '#b5ffe8',
+                maxColor: '#09529c'
+              },
+
+              series: [{
+                data: data_unoff,
+                name: 'Random data',
+                borderColor: 'black',
+                 borderWidth: 0.2,
+                states: {
+                  hover: {
+                    color: '#BADA55'
+                  }
+                },
+                dataLabels: {
+                  enabled: false,
+                  format: '{point.name}'
+                }
+              }]
+            });
+            $(document).ready(function() {
+             // executes when HTML-Document is loaded and DOM is ready
+             charr_unoff.reflow();
+            });
+            
+    </script>
+    <style type="text/css">
+      /*#container {
+          height: 600px; 
+          min-width: 710px; 
+          max-width: 800px; 
+          margin: 0 auto; 
+      }
+*/      .loading {
+          margin-top: 0em;
+          text-align: center;
+          color: black;
+      }
+
+    </style>
+    </div>
+    <div class="col-6"  >
+          <section id="statistic1" class="statistic-section one-page-section" style="margin-left:20px;width:90%">
+              <div class="container">
+                  <div class="row text-center">
+                      <div class="col-6">
+                          <div class="counter">
+                             <i class="fas fa-virus fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itc_unoff}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Infected Cases</p>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="counter">
+                              <i class="fas fa-skull fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itd_unoff}}
+                              </h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Deaths</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                              <i class="fas fa-first-aid fa-2x stats-icon"></i>
+                              <h2 class="timer count-title count-number">{{itr_unoff}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Recovered Cases</p>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="counter">
+                             <img src="https://image.flaticon.com/icons/svg/2760/2760513.svg" style="height:35px;color:white">
+                              <h2 class="timer count-title count-number">{{iac_unoff}}</h2>
+                              <div class="stats-line-black"></div>
+                              <p class="stats-text">Total Active Cases</p>
+                          </div>
+                      </div>
+            
+                  </div>
+              </div>
+          </section>
+          <style type="text/css">
+            .statistic-section {
+
+             padding-top: 30px;
+             padding-bottom: 10px;
+             background: #00c6ff;  /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+             background: linear-gradient(to right, #0072ff, #00c6ff); 
+             width:550px  ;
+              }
+
+              .count-title {
+                  font-size: 50px;
+                  font-weight: normal;
+                  margin-top: 10px;
+                  margin-bottom: 0;
+                  text-align: center;
+                  font-weight: bold;
+                  color: #fff;
+              }
+
+              .stats-text {
+                  font-size: 15px;
+                  font-weight: normal;
+                  margin-top: 15px;
+                  margin-bottom: 50px;
+                  text-align: center;
+                  color: #fff;
+                  text-transform: uppercase;
+                  font-weight: bold;
+              }
+
+              .stats-line-black {
+                margin: 12px auto 0;
+                  width: 55px;
+                  height: 2px;
+                  background-color: #fff;
+              }
+              .stats-icon {
+                  font-size: 35px;
+                  margin: 0 auto;
+                  float: none;
+                  display: table;
+                  color: #fff;
+              }
+
+              @media (max-width: 992px) {
+                .counter {
+                  margin-bottom:0;
+                }
+              }
+          </style>
+    </div>
+    
+    </div>
+
+    <style type="text/css">
+      .noDisplay { display:none; }
+/*      .slideDiv2 {
+            display:none;
+        }*/
+    </style>
+
+     <!-- TOGGLER -->
+<div class="btn-group btn-toggle" style="border:thick solid #FFF;border-radius:5%;margin-top:3px"> 
+    <button class="btn btn-primary active slide1">OFFICIAL SOURCE</button>
+    <button class="btn btn-default slide2 ">UNOFFICIAL SOURCE</button>
+  </div>
+  <!-- <br> <br>  -->
+  <script type="text/javascript">
+      $(".slide1").click(function () {
+  if($('.slide1').hasClass("active")==false && $('.slide1').hasClass("btn-primary")==false)
+     {
+       $('.slide1').addClass("active");
+       $('.slide1').addClass("btn-primary");
+       $('.slide1').removeClass("btn-default");
+       $('.slide2').removeClass("active");
+       $('.slide2').removeClass("btn-primary");
+       $('.slide2').addClass("btn-default");
+
+     }
+  if ($(".slideDiv1").hasClass("noDisplay")) {
+    $(".slideDiv1").removeClass("noDisplay").show("slide");
+    $(".slideDiv2").addClass("noDisplay").hide("slide");
+  }
+});
+
+$(".slide2").click(function () {
+  if($('.slide2').hasClass("active")==false && $('.slide2').hasClass("btn-primary")==false)
+     {
+       $('.slide2').addClass("active");
+       $('.slide2').addClass("btn-primary");
+       $('.slide2').removeClass("btn-default");
+       $('.slide1').removeClass("active");
+       $('.slide1').removeClass("btn-primary");
+       $('.slide1').addClass("btn-default");
+     }
+  if ($(".slideDiv2").hasClass("noDisplay")) {
+    $(".slideDiv2").removeClass("noDisplay").show("slide");
+    $(".slideDiv1").addClass("noDisplay").hide("slide");
+  }
+});
+    </script>
+    <style type="text/css">
+      .slide1
+      {
+        color: white;
+      }
+      .slide2
+      {
+        color: white;
+
+      }
+    </style>
+    </section>
+    <section style="align-content:center;margin-left:15%;width:60%;font-family:Helvetica;">
+      <div style="background:#f5fff5;padding:20px;color:black;" id="faq">
+        
+        <center>
+        <h2> <img src="https://image.flaticon.com/icons/svg/942/942751.svg" height="100px" alt="🇮🇳">FAQs</h2>
+        </center>
+        <br>
+        <br>
+        <ol>
+          <li>
+            <p>
+              <b>What is the source of your data?</b>
+            </p>
+            <p >
+              <ul>
+                <li>For Global Cases: Data is scraped from <a target=”_blank”  href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a>'s Official website, <a target=”_blank”  href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC</a> and <a target=”_blank”  href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a></li>
+                <li>For Indian Cases: Official Data is scraped from  <a target=”_blank” href="https://www.mohfw.gov.in/">Ministry of Health and Welfare</a>'s Official Website</li>
+                <li>For Indian Cases: Unofficial Data is scraped from a <a target=”_blank” href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml"> CrowdSourced Patient Database </a> driven by a great group of volunteers - <a target=”_blank” href="https://twitter.com/covid19indiaorg">COVID19.org </a> - Do visit their site. Its really great! </li>
+
+              </ul>
+            </p>
+          </li>
+          <br>
+         <li>
+            <p>
+              <b>Well, if you are considering such good sources, then how do you explain the difference in stats for India in the world and country specific analytics?</b>
+            </p>
+            <p >
+              That's a great question! So the MFHW website updates the stats on a scheduled basis (instead of what they claim as "live") but  WHO and other sources used for global data gets updated pretty rapidly compared to it. Hence, this delay between updation of MFHW and global data websites creates this issue. However, I've added another analytics for India (you can see it by clicking the "Unofficial Source" tab in the same section). This analytics is taken from a crowdsourced database which is updated rapidly (although is not officially considered) but has been proven to be valid most of the times. Stats from these sources may match up well for India in the global stats as well. 
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>Are you planning to add an API for this analytics?</b>
+            </p>
+            <p >
+              Yes, I am working on making this a fully functional API. However, there are already some great APIs (by the time this project gets deployed XD) which can be used for both the stats.
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>Why are you working on this?</b>
+            </p>
+            <p >
+              Initially, I started working on it to fillup the gap of such real-time websites and APIs. Another reason, was to document such kind of data, so that people can be aware of the outbreak of the diesease and could realise the gravity of the situation. I also saw many folks getting confused and deluded, either through Tele-news or by whatsapp forwards.This became one of my motivations for adding things besides the stats and geoanalysis like myth busters, precautions, symptoms , disease description and essential links etc.
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>How do I report a bug?</b>
+            </p>
+            <p >
+              Just write down your bug on the Tawk messenger by clicking at the bottom right message icon. (Also, you won't recieve any bounty on reporting a bug. Don't make it a business 🤪)
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>Why is everything aligned so strangely on my computer? Have you hard-coded the dimensions?</b>
+            </p>
+            <p >
+              I won't answer that. 😜
+            </p>
+          </li>
+
+        </ol>
+      </div>
+      <style type="text/css">
+          #faq
+          {
+            -moz-box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+          }
+        </style>
+    </section>
+    <section style="align-content:center;margin-left:15%;width:60%;font-family:Helvetica;">
+      <div style="background:#fbfff2;padding:20px;color:black;" id="linkk">
+        <center>
+        <h2> <img src="https://www.flaticon.com/premium-icon/icons/svg/2703/2703893.svg" height="100px" alt="🇮🇳">HELPFUL LINKS</h2>
+        </center>
+        <br>
+        <br>
+        <ul>
+          <li>
+            <p>
+              <b>HELPLINE NUMBERS [BY STATE] </b>
+            </p>
+            <p >
+              <a target=”_blank” href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf">https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf</a>
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>MINISTRY OF HEALTH AND FAMILY WELFARE, GOV. OF INDIA - HOME PAGE</b>
+            </p>
+            <p >
+              <a target=”_blank”  href="https://www.mohfw.gov.in/">https://www.mohfw.gov.in/</a>
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>WHO : COVID-19 HOME PAGE</b>
+            </p>
+            <p >
+              <a target=”_blank” href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/</a>
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <b>CROWD-SOURCED ESSENTIAL GOODS AND RESOURCES LIST ACROSS INDIA - COVID19.ORG</b>
+            </p>
+            <p >
+              <a target=”_blank” href="https://bit.ly/covid19resourcelist">https://bit.ly/covid19resourcelist</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <style type="text/css">
+          #linkk
+          {
+            -moz-box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+          }
+        </style>
+    </section>
+  </div>
+</div>
+
+<div id="footer">
+  <span style="display:block;font-size:1.5em;line-height:55px;color:white;text-align:center;margin-left:-10%">Developer : <span style="display:inline-block;">&copy; <a href="http://akashthegreat1.netlify.com/">Akash Sharma</a></span></span><br>
+  <span style="display:block;font-size:1em;line-height:30px;margin-top:-35px;color:black"><i>&lang; Just click the above link to visit my profile page and give me some SEO juice bois&rang;</i></span>
+  <br>
+</div>
+
+
+<script type="text/javascript">
+      $('nav.main>.tab').each(function(index){
+  $(this).css({'transition-delay':((index*0.1)+'s')}); 
+});
+
+$('#grid_wrapper>card').each(function(index){
+  $(this).css({'transition-delay':((index*0.05)+'s')}); 
+});
+$('document').ready(function(){
+  $('#grid_wrapper').removeClass('init');
+});
+//$('nav.main').removeClass('inactive');
+$('nav.main>.tab').click(function(e){
+  var $eq=$('nav.main>.tab').index($(this));
+  var $ripple=$("<div/>");
+  $ripple.addClass('ripple');
+  $ripple.css({left:e.clientX-$(this).offset().left,top:e.clientY-$(this).offset().top});
+  $(this).append($ripple);
+  setTimeout(function(){
+    $ripple.remove();
+  },1000);
+  var $megaRipple=$("<div/>");
+  $megaRipple.addClass('ripple');
+  $megaRipple.addClass('mega');
+  $megaRipple.css({
+                  left:e.clientX,
+                  top:e.clientY,
+                  background:$(this).css('border-color')
+                  });
+  $('#content_wrapper>div.content').append($megaRipple);
+  setTimeout(function(){
+    $megaRipple.animate({opacity:0},1000);
+    setTimeout(function(){
+      $megaRipple.remove();
+    },1000);
+  },500);
+  $('nav.main').find('.active').removeClass('active');
+  $(this).addClass('active');
+  $('#grid_wrapper>card>div').removeClass('active');
+  var $card=$('#grid_wrapper>card').eq($eq).find('div');
+  $('#content_wrapper>div.clone>span').html($card.find('span').html());
+  $card.addClass('active');
+  $('#content_wrapper>div.content>section').removeClass('active');
+  $('#content_wrapper>div.content>section').addClass('inactive');
+  $('#content_wrapper>div.content>section').eq($eq).addClass('active');
+  $('#content_wrapper>div.content>section').eq($eq).removeClass('inactive');
+});
+
+hLists=document.getElementsByClassName('hList');
+for(var i=0; i<hLists.length;i++)
+  {
+      hLists[i].leftScrollTarget=0;
+      hLists[i].onmousewheel=function(event) {
+      temp=this.leftScrollTarget-(event.wheelDelta*10);       if(temp<=0)
+        this.leftScrollTarget=0;
+      else if(temp>=this.scrollWidth-this.clientWidth)
+        this.leftScrollTarget = this.scrollWidth-this.clientWidth;
+      else 
+        this.leftScrollTarget = temp;
+        event.preventDefault();
+      };
+  }
+function render(){
+  window.requestAnimationFrame(render);
+  for(var i=0;i<hLists.length;i++)
+    {
+      hLists[i].scrollLeft+=(hLists[i].leftScrollTarget-hLists[i].scrollLeft)/10;
+    }
+}render();
+var sections=document.getElementById('home').getElementsByTagName('section');
+for(var i=0;i<sections.length;i++)
+  {
+    sections[i].transY=0;
+  }
+  // window.onscroll=function(e){
+  //   for(var i=0;i<sections.length;i++){
+  //     sections[i].transY=(i)*parseInt(window.scrollY)
+  //     sections[i].style.transform='translateY(-'+sections[i].transY+'px)';
+  //   }
+  // }
+
+$('#grid_wrapper>card>div').click(function(){
+  
+  //Get index of active section
+  var $eq=$('#grid_wrapper>card').index($(this).parent());
+  
+  //clone the tab and add to content_wrapper
+  var $clone = $(this).clone();
+  $clone.addClass('clone');
+  $('#content_wrapper').append($clone);
+  setTimeout(function(){
+    $clone.addClass('deactivate');
+  },250);
+  
+  //Make overlay visible and animate to full size
+$('#content_wrapper').removeClass('inactive');
+  $('#content_wrapper>div.clone').css({
+    top:$(this).offset().top - $(window).scrollTop() + ($(this).height()/2),
+    left:$(this).offset().left - $(window).scrollLeft() + ($(this).width()/2),
+    height:$(this).height(),
+    width:$(this).width()
+  }).show().animate({
+    top:'50%',
+    left:'50%',
+    width:'100%',
+    height:'100%'
+  },500);
+  
+  //Add active class to clicked tab to make it disappear
+  $('#grid_wrapper>card>div').removeClass('active');
+  $(this).addClass('active');
+  
+  //500 ms after click  
+  //overlay is fullSize
+  setTimeout(function(){
+    
+    //Show menu
+    $('nav').removeClass('inactive');
+    
+    //Activate tab on menu
+    $('nav.main>.tab').removeClass('active');
+    $('nav.main>.tab').eq($eq).addClass('active');
+    document.querySelectorAll('nav.main>.tab.active')[0].scrollIntoView();
+    
+  },500);
+  
+  //700ms after click 
+  //Menu is visible
+  setTimeout(function(){
+    
+    //Animate corresponding section content to life
+    $('#content_wrapper>div.content>section').removeClass('active');
+    $('#content_wrapper>div.content>section').addClass('inactive');
+
+    $('#content_wrapper>div.content>section').eq($eq).addClass('active');
+    $('#content_wrapper>div.content>section').eq($eq).removeClass('inactive');
+  
+  },700);
+ 
+});
+
+$('#content_wrapper>.close').click(function(){
+  $('nav.main').addClass('inactive');
+  $('#content_wrapper>div.content>section').removeClass('active');
+  $('#content_wrapper>div.content>section').addClass('inactive');
+
+  setTimeout(function(){
+    $('#content_wrapper>div.clone').removeClass('deactivate');
+  },750);
+  setTimeout(function(){
+    var $eq=$('nav.main>.tab').index($('nav.main>.active'));
+    var $active=$('#grid_wrapper>card').eq($eq).find('div');
+    $('#content_wrapper>div.clone').animate({
+      top:$active.offset().top - $(window).scrollTop() +$active.height()/2,
+      left:$active.offset().left- $(window).scrollLeft() +$active.width()/2,
+      height:$active.height(),
+      width:$active.width()
+    },700,'easeOutCubic',function(){
+      setTimeout(function(){
+      $('#content_wrapper>div.clone').remove();
+      $('#grid_wrapper>card>div').removeClass('active');
+      });
+    });
+    $('#content_wrapper').addClass('inactive');
+  },500);
+});
+</script>
+</body>
+</html>
