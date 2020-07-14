@@ -1,0 +1,7 @@
+{
+  "name": "CoronaVirus-WebApp",
+  "description": "A webApp/portal for COVID19 related stats,analytics and info",
+  "logo":"https://www.svgrepo.com/show/1064/virus.svg",
+  "image":"heroku/nodejs",
+  "keywords":["COVID19","Corona Virus","CoronaVirus","CoronaVirus","Disease Portal","Stats","Analytics"]
+ }
